@@ -1,0 +1,88 @@
+.homepage-container {
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f); /* Ana gradyan */
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-button {
+  background-color: #fdbb2d;
+  color: #1a2a6c;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffa114;
+}
+
+/* Category Section */
+.category-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  padding: 50px 20px;
+  /* BURAYI GÜNCELLEDİK */
+  background: linear-gradient(
+    45deg,
+    #384a93,
+    #670707
+  ); /* Hero section'a benzer, ama biraz daha koyu gradyan */
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* background geçişi ekledik */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    45deg,
+    #2b3a8d,
+    #5d0000
+  ); /* Hover'da hafif renk değişimi */
+}
+
+/* Bestsellers Section */
+.bestsellers-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}

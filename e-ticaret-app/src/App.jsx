@@ -8,11 +8,12 @@ import {
 import ProductList from "./components/ProductList/ProductList.jsx";
 import Cart from "./components/Card/Cart.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
+import Login from "./components/Login/Login.jsx";
+import HomePage from "./components/HomePage/HomePage.jsx";
 import productsData from "./data/products.js";
 import "./App.css";
 
-// Yeni component: TeamPage
-// Bu component URL'deki parametreyi alacak ve ürünleri filtreleyecek
+// TeamPage component'ı artık hem Navbar'ı hem de Cart'ı kendi içinde barındıracak.
 const TeamPage = ({
   products,
   addToCart,
@@ -22,17 +23,20 @@ const TeamPage = ({
 }) => {
   const { teamName } = useParams();
   const filteredProducts = products.filter(
-    (p) => p.team.toLowerCase() === teamName
+    (p) => p.team && p.team.toLowerCase() === teamName.toLowerCase()
   );
 
   return (
     <>
-      <ProductList products={filteredProducts} addToCart={addToCart} />
-      <Cart
-        cart={cart}
-        removeFromCart={removeFromCart}
-        total={calculateTotal()}
-      />
+      <Navbar />
+      <div className="main-content">
+        <ProductList products={filteredProducts} addToCart={addToCart} />
+        <Cart
+          cart={cart}
+          removeFromCart={removeFromCart}
+          total={calculateTotal()}
+        />
+      </div>
     </>
   );
 };
@@ -69,37 +73,32 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <div className="main-content">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <ProductList products={products} addToCart={addToCart} />
-                  <Cart
-                    cart={cart}
-                    removeFromCart={removeFromCart}
-                    total={calculateTotal()}
-                  />
-                </>
-              }
-            />
-            {/* Dinamik rota ile takıma göre filtreleme */}
-            <Route
-              path="/:teamName"
-              element={
-                <TeamPage
-                  products={products}
-                  addToCart={addToCart}
-                  cart={cart}
-                  removeFromCart={removeFromCart}
-                  calculateTotal={calculateTotal}
-                />
-              }
-            />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route
+            path="/anasayfa"
+            element={
+              <>
+                <Navbar />
+                <div className="main-content">
+                  <HomePage products={products} addToCart={addToCart} />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/:teamName"
+            element={
+              <TeamPage
+                products={products}
+                addToCart={addToCart}
+                cart={cart}
+                removeFromCart={removeFromCart}
+                calculateTotal={calculateTotal}
+              />
+            }
+          />
+        </Routes>
       </div>
     </Router>
   );

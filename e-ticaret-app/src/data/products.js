@@ -73,14 +73,14 @@ const products = [
   },
   {
     id: 11,
-    name: "Konyaspor Forma 10",
+    name: "Konyaspor Forma 10 ",
     price: 1999.0,
-    image: "/images/forma12.jpg",
+    image: "/images/konya11.jpg",
     team: "Konyaspor",
   },
   {
     id: 12,
-    name: "Konyaspor Forma 10",
+    name: "Konyaspor Forma 11",
     price: 1999.0,
     image: "/images/forma12.jpg",
     team: "Konyaspor",

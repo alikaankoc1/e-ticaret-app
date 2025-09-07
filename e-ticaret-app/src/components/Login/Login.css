@@ -1,0 +1,149 @@
+/* Genel Kapsayıcı Stil */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #282c34,
+    #1c2025,
+    #282c34
+  ); /* Koyu gradyan */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Arka Plan Animasyonu */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Login Kartı Stil */
+.login-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  max-width: 650px;
+  width: 100%;
+  animation: cardEntrance 1.2s ease-out forwards;
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Kart Giriş Animasyonu */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Başlık Stil */
+.login-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(
+    45deg,
+    #ffffff,
+    #61dafb
+  ); /* Beyaz ve mavi gradyan */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Slogan Stil */
+.login-slogan {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+/* Buton Stil */
+.login-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #61dafb, #21a1f1);
+  color: #282c34; /* Buton yazısı için #282c34 rengini kullanıyoruz */
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: linear-gradient(45deg, #21a1f1, #61dafb);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  color: white; /* Hover'da yazı rengini beyaza çevir */
+}
+
+.login-button:active {
+  transform: translateY(-2px) scale(1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Küçük ekranlar için responsive ayarlar */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+  .login-title {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  .login-slogan {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+  .login-button {
+    font-size: 1.1rem;
+    padding: 14px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-title {
+    font-size: 1.8rem;
+  }
+  .login-slogan {
+    font-size: 0.9rem;
+  }
+  .login-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}

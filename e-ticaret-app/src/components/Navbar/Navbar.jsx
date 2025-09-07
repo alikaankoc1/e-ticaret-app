@@ -24,7 +24,7 @@ function Navbar() {
       </div>
       <ul className="navbar-links">
         <li>
-          <Link to="/">Anasayfa</Link>
+          <Link to="/anasayfa">Anasayfa</Link>
         </li>
         <li className="dropdown-container">
           <a onClick={handleMenuToggle}>Ürünler</a>
