@@ -1,12 +1,26 @@
-.product-list {
+/* .product-list {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  width: 45%;
+  width: 65%;
   min-width: 300px;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+.product-list {
+  /* Bu satırı değiştir */
+  flex: 3; /* Sepetten 3 kat daha fazla yer kaplasın */
+  min-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }

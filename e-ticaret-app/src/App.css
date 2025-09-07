@@ -10,4 +10,8 @@ body {
   justify-content: space-around;
   padding: 20px;
   flex-wrap: wrap;
+  /* Öğelerin esnek bir şekilde büyümesini sağlar */
+  flex-grow: 1;
+  /* Gerekirse öğelerin küçülmesini sağlar */
+  flex-shrink: 1;
 }

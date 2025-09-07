@@ -1,5 +1,6 @@
 .cart {
-  width: 45%;
+  flex: 1;
+  /* width: 30%; */
   min-width: 300px;
   background-color: white;
   padding: 20px;
