@@ -11,14 +11,18 @@
 
 .product-card img {
   width: 100%;
-  height: auto;
+  height: 150px; /* Sabit bir yükseklik belirle (Örn: 150px veya 120px) */
+  object-fit: contain; /* Resmin belirlenen alana nasıl sığacağını ayarla */
   border-radius: 4px;
+  /* Resimlerin dikeyde ortalanması için ek özellikler (isteğe bağlı) */
+  display: block; /* img varsayılan olarak inline olduğu için */
+  margin: 0 auto; /* Eğer resim sabit yükseklikte ortalanmazsa */
 }
-
 .product-card h3 {
   margin: 10px 0;
   font-family: sans-serif;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .product-card button {
