@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import ProductList from "./components/ProductList.jsx";
 import Cart from "./components/Cart.jsx";
-import productsData from "./products.js";
-import "./styles.css";
+import productsData from "./data/products.js";
+
+import "./style.css";
 
 function App() {
   const [products] = useState(productsData);
