@@ -1,21 +1,48 @@
 import React, { useState } from "react";
-
-// Component'ları yeni klasörlerinden import et
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useParams,
+} from "react-router-dom";
 import ProductList from "./components/ProductList/ProductList.jsx";
 import Cart from "./components/Card/Cart.jsx";
-// Veri ve stil dosyalarını import et
-import productsData from "./data/products.js";
 import Navbar from "./components/Navbar/Navbar.jsx";
+import productsData from "./data/products.js";
 import "./App.css";
+
+// Yeni component: TeamPage
+// Bu component URL'deki parametreyi alacak ve ürünleri filtreleyecek
+const TeamPage = ({
+  products,
+  addToCart,
+  cart,
+  removeFromCart,
+  calculateTotal,
+}) => {
+  const { teamName } = useParams();
+  const filteredProducts = products.filter(
+    (p) => p.team.toLowerCase() === teamName
+  );
+
+  return (
+    <>
+      <ProductList products={filteredProducts} addToCart={addToCart} />
+      <Cart
+        cart={cart}
+        removeFromCart={removeFromCart}
+        total={calculateTotal()}
+      />
+    </>
+  );
+};
 
 function App() {
   const [products] = useState(productsData);
   const [cart, setCart] = useState([]);
 
-  // Sepete ürün ekleme fonksiyonu
   const addToCart = (productToAdd) => {
     const existingProduct = cart.find((item) => item.id === productToAdd.id);
-
     if (existingProduct) {
       setCart(
         cart.map((item) =>
@@ -29,12 +56,10 @@ function App() {
     }
   };
 
-  // Sepetten ürün çıkarma fonksiyonu
   const removeFromCart = (productId) => {
     setCart(cart.filter((item) => item.id !== productId));
   };
 
-  // Toplam fiyatı hesapla
   const calculateTotal = () => {
     return cart
       .reduce((total, item) => total + item.price * item.quantity, 0)
@@ -42,17 +67,41 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar /> {/* Navbar'ı buraya ekledik */}
-      <div className="main-content">
-        <ProductList products={products} addToCart={addToCart} />
-        <Cart
-          cart={cart}
-          removeFromCart={removeFromCart}
-          total={calculateTotal()}
-        />
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="main-content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <ProductList products={products} addToCart={addToCart} />
+                  <Cart
+                    cart={cart}
+                    removeFromCart={removeFromCart}
+                    total={calculateTotal()}
+                  />
+                </>
+              }
+            />
+            {/* Dinamik rota ile takıma göre filtreleme */}
+            <Route
+              path="/:teamName"
+              element={
+                <TeamPage
+                  products={products}
+                  addToCart={addToCart}
+                  cart={cart}
+                  removeFromCart={removeFromCart}
+                  calculateTotal={calculateTotal}
+                />
+              }
+            />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
