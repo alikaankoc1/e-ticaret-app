@@ -29,6 +29,25 @@ const products = [
     price: 120.0,
     image: "/images/ceket.webp",
   },
+
+  {
+    id: 5,
+    name: "Ceket",
+    price: 120.0,
+    image: "/images/ceket.webp",
+  },
+  {
+    id: 6,
+    name: "Ceket",
+    price: 120.0,
+    image: "/images/ceket.webp",
+  },
+  {
+    id: 7,
+    name: "Ceket",
+    price: 120.0,
+    image: "/images/ceket.webp",
+  },
 ];
 
 export default products;

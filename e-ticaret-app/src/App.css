@@ -15,3 +15,6 @@ body {
   /* Gerekirse öğelerin küçülmesini sağlar */
   flex-shrink: 1;
 }
+p {
+  font-family: sans-serif;
+}
