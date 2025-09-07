@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./ProductCard.css";
 function ProductCard({ product, addToCart }) {
   return (
     <div className="product-card">
