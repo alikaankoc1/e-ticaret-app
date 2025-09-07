@@ -424,6 +424,71 @@ const products = [
     team: "Fenerbahçe",
     image: "/images/fb12.jpg",
   },
+  // new products
+  // products.js dosyanızın sonuna ekleyin
+  {
+    id: 59,
+    name: "Bayern Münih Forma",
+    price: 2975.0,
+    team: "Bayern Münih",
+    image: "/images/bayern.jpg",
+  },
+  {
+    id: 60,
+    name: "Barcelona Forma",
+    price: 2975.0,
+    team: "Barcelona",
+    image: "/images/barca.jpg",
+  },
+  {
+    id: 61,
+    name: "Chelsea Forma",
+    price: 2975.0,
+    team: "Chelsea",
+    image: "/images/chelsea.jpg",
+  },
+  {
+    id: 62,
+    name: "Dortmund Forma",
+    price: 2975.0,
+    team: "Dortmund",
+    image: "/images/dortmund.jpg",
+  },
+  {
+    id: 63,
+    name: "Milan Forma",
+    price: 2975.0,
+    team: "Milan",
+    image: "/images/milan.jpg",
+  },
+  {
+    id: 64,
+    name: "PSG Forma",
+    price: 2975.0,
+    team: "PSG",
+    image: "/images/psg.jpg",
+  },
+  {
+    id: 65,
+    name: "Real Madrid Forma",
+    price: 2975.0,
+    team: "Real Madrid",
+    image: "/images/real.jpg",
+  },
+  {
+    id: 66,
+    name: "PSG Forma 2",
+    price: 2975.0,
+    team: "PSG",
+    image: "/images/psg.jpg",
+  },
+  {
+    id: 67,
+    name: "Manchester United Forma",
+    price: 2975.0,
+    team: "Manchester United",
+    image: "/images/united.jpg",
+  },
 ];
 
 export default products;

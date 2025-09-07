@@ -40,49 +40,41 @@
 /* Category Section */
 .category-section h2 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem; /* başlığı da biraz büyüttüm */
+  margin-bottom: 25px;
 }
 
 .category-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+  gap: 30px; /* kartlar arası boşluğu biraz artırdım */
+  max-width: 1500px; /* genişliği artırdım */
+  margin: 0 auto;
 }
 
 .category-card {
-  flex: 1 1 250px;
-  max-width: 300px;
   text-align: center;
-  padding: 50px 20px;
-  /* BURAYI GÜNCELLEDİK */
-  background: linear-gradient(
-    45deg,
-    #384a93,
-    #670707
-  ); /* Hero section'a benzer, ama biraz daha koyu gradyan */
+  padding: 70px 30px; /* iç boşluğu artırdım */
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f); /* Ana gradyan */
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* background geçişi ekledik */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  font-size: 1.1rem; /* yazıları biraz büyüttüm */
 }
 
-.category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(
-    45deg,
-    #2b3a8d,
-    #5d0000
-  ); /* Hover'da hafif renk değişimi */
-}
+/* .category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(45deg, #2b3a8d, #5d0000); */
 
 /* Bestsellers Section */
 .bestsellers-section h2 {
   text-align: center;
   font-size: 2rem;
-  margin-top: 40px;
   margin-bottom: 20px;
+}
+h2 {
+  text-align: center;
 }

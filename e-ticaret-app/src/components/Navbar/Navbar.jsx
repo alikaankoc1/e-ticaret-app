@@ -39,6 +39,9 @@ function Navbar() {
           )}
         </li>
         <li>
+          <Link to="/sale">Çok Satanlar</Link>
+        </li>
+        <li>
           <Link to="/sepet">Sepet</Link>
         </li>
       </ul>

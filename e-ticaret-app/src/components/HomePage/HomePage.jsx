@@ -5,9 +5,15 @@ import "./HomePage.css";
 
 function HomePage({ products, addToCart }) {
   // Anasayfada gösterilecek öne çıkan ürünlerin id'leri
-  const featuredProductIds = [7, 11, 15, 21, 28, 30, 42, 49, 57, 51, 41];
+  const featuredProductIds = [1, 19, 16, 26, 33, 39, 27, 37, 8, 15, 50, 57];
   const featuredProducts = products.filter((product) =>
     featuredProductIds.includes(product.id)
+  );
+
+  // Yeni gelen ürünlerin id'leri
+  const newArrivalProductIds = [59, 60, 61, 62, 63, 64];
+  const newArrivalProducts = products.filter((product) =>
+    newArrivalProductIds.includes(product.id)
   );
 
   return (
@@ -37,8 +43,12 @@ function HomePage({ products, addToCart }) {
           <Link to="/fenerbahçe" className="category-card">
             <h3>Fenerbahçe Formaları</h3>
           </Link>
-
-          {/* Diğer takımlar için de Link bileşenleri ekleyebilirsin */}
+          <Link to="/trabzonspor" className="category-card">
+            <h3>Trabzonspor Formaları</h3>
+          </Link>
+          <Link to="/sale" className="category-card">
+            <h3>Yeni Gelenler</h3>
+          </Link>
         </div>
       </div>
 
@@ -46,6 +56,12 @@ function HomePage({ products, addToCart }) {
       <div className="bestsellers-section">
         <h2>Çok Satanlar</h2>
         <ProductList products={featuredProducts} addToCart={addToCart} />
+      </div>
+
+      {/* Yeni Gelenler */}
+      <div className="new-arrivals-section">
+        <h2>Yeni Gelenler</h2>
+        <ProductList products={newArrivalProducts} addToCart={addToCart} />
       </div>
     </div>
   );
