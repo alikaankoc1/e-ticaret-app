@@ -147,3 +147,64 @@
     padding: 12px 25px;
   }
 }
+
+/* new css */
+.login-container::before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  width: 300px;
+  height: 1200px;
+  background: url("/images/lm.png") no-repeat center/contain;
+  opacity: 0.18;
+  pointer-events: none;
+  transform-origin: center;
+  animation: floatBall 20s linear infinite;
+}
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  right: 50px;
+  width: 300px;
+  height: 1200px;
+  background: url("/images/cr.png") no-repeat center/contain;
+  opacity: 0.18;
+  pointer-events: none;
+  transform-origin: center;
+  animation: floatBall 20s linear infinite;
+}
+
+/* float animasyonu (örnek) */
+/* @keyframes floatBall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(60vw, 40vh) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+} */
+
+.login-button:hover {
+  background: linear-gradient(45deg, #21a1f1, #61dafb);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 0 25px rgba(33, 161, 241, 0.8), 0 0 50px rgba(97, 218, 251, 0.6);
+  color: white;
+}
+.login-card {
+  border: 2px solid rgba(97, 218, 251, 0.4);
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.2);
+  position: relative;
+}
+
+.login-card::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 2px dashed rgba(97, 218, 251, 0.2);
+  border-radius: 25px;
+  z-index: -1;
+}

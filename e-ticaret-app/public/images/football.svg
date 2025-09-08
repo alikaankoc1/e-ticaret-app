@@ -1,0 +1,58 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-labelledby="titleDesc" role="img">
+  <title id="titleDesc">Soccer ball</title>
+  <desc>Stylized soccer/football ball icon with pentagon patches</desc>
+  <defs>
+    <radialGradient id="g1" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"></stop>
+      <stop offset="60%" stop-color="#e6eef6" stop-opacity="0.9"></stop>
+      <stop offset="100%" stop-color="#c6d8e6" stop-opacity="0.85"></stop>
+    </radialGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"></feGaussianBlur>
+      <feOffset in="blur" dx="0" dy="10" result="offsetBlur"></feOffset>
+      <feMerge>
+        <feMergeNode in="offsetBlur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- outer sphere -->
+  <circle cx="256" cy="256" r="230" fill="url(#g1)" stroke="#b8cfe1" stroke-width="6"></circle>
+  
+  <!-- subtle shading -->
+  <ellipse cx="200" cy="150" rx="140" ry="60" fill="rgba(0,0,0,0.06)"></ellipse>
+  <ellipse cx="320" cy="380" rx="160" ry="70" fill="rgba(0,0,0,0.04)"></ellipse>
+
+  <!-- pentagon/patch group (stylized, not geometrically perfect) -->
+  <g transform="translate(256,232)" filter="none">
+    <!-- center pentagon -->
+    <path d="M0,-60 L48,-18 L30,50 L-30,50 L-48,-18 Z" fill="#0b0b0b" stroke="#111" stroke-width="2"></path>
+    <!-- top-left patch -->
+    <path d="M-60,-20 L-12,-80 L20,-44 L-60,-10 Z" fill="#0b0b0b" stroke="#111" stroke-width="2"></path>
+    <!-- top-right patch -->
+    <path d="M60,-20 L12,-80 L-20,-44 L60,-10 Z" fill="#0b0b0b" stroke="#111" stroke-width="2"></path>
+    <!-- left patch -->
+    <path d="M-92,40 L-42,10 L-30,50 L-80,80 Z" fill="#0b0b0b" stroke="#111" stroke-width="2"></path>
+    <!-- right patch -->
+    <path d="M92,40 L42,10 L30,50 L80,80 Z" fill="#0b0b0b" stroke="#111" stroke-width="2"></path>
+  </g>
+
+  <!-- white separators (to make tiles look separated) -->
+  <g stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <path d="M256 172 L210 214 L236 284" fill="none"></path>
+    <path d="M256 172 L302 214 L276 284" fill="none"></path>
+    <path d="M236 284 L190 330" fill="none"></path>
+    <path d="M276 284 L322 330" fill="none"></path>
+    <path d="M190 330 L256 360 L322 330" fill="none"></path>
+  </g>
+
+  <!-- small highlight -->
+  <circle cx="190" cy="160" r="10" fill="rgba(255,255,255,0.9)"></circle>
+
+  <!-- soft overall shadow -->
+  <g filter="url(#softShadow)" opacity="0.25">
+    <circle cx="256" cy="256" r="230" fill="none"></circle>
+  </g>
+</svg>
