@@ -22,7 +22,7 @@ body {
 
 .payment-card h2 {
   font-size: 24px;
-  color: #333;
+  color: #000000;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -46,7 +46,7 @@ body {
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
-  color: #555;
+  color: #000000;
 }
 
 .payment-form input {
@@ -75,9 +75,9 @@ body {
 .pay-button {
   width: 100%;
   padding: 15px;
-  background-color: #fdbb2d;
+  background-color: white;
   color: #000000;
-  border: none;
+  border: 2px solid #666;
   border-radius: 8px;
   font-size: 18px;
   font-weight: bold;
@@ -89,10 +89,6 @@ body {
 /* .pay-button:hover {
   background-color: #218838;
 } */
-
-.pay-button:active {
-  background-color: #1e7e34;
-}
 
 /* Modal Stilleri */
 .modal-overlay {

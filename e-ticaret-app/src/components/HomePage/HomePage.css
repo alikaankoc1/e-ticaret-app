@@ -24,17 +24,14 @@
 }
 
 .hero-button {
-  background-color: #fdbb2d;
+  background-color: white;
   color: #000000;
   padding: 12px 30px;
+  border: 2px solid #666;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #ffa114;
 }
 
 /* Category Section */
