@@ -64,7 +64,6 @@ const NewArrivalsPage = ({
     <>
       <Navbar />
       <div className="main-content">
-        <h2 style={{ paddingLeft: "20px" }}>Yeni Gelenler</h2>
         <ProductList products={newArrivalProducts} addToCart={addToCart} />
         <Cart
           cart={cart}
