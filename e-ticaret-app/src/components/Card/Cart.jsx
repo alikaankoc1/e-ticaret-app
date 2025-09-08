@@ -31,6 +31,10 @@ function Cart({
                     <span className="item-price">
                       {item.price.toFixed(2)} TL
                     </span>
+                    {/* Beden bilgisini buraya ekledik */}
+                    <span className="item-size">
+                      Beden: {item.selectedSize}
+                    </span>
                   </div>
                 </div>
                 <div className="item-actions">

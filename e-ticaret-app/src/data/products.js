@@ -6,6 +6,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma3.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 3,
@@ -20,6 +22,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma4.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 4,
@@ -27,6 +30,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma5.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 5,
@@ -34,6 +38,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma6.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
 
   {
@@ -42,6 +47,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma7.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 7,
@@ -49,6 +55,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma8.webp",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 8,
@@ -56,6 +63,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma9.webp",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 9,
@@ -63,6 +71,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma10.webp",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 10,
@@ -70,6 +79,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma11.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 11,
@@ -77,6 +87,7 @@ const products = [
     price: 1999.0,
     image: "/images/konya11.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 12,
@@ -84,6 +95,7 @@ const products = [
     price: 1999.0,
     image: "/images/forma12.jpg",
     team: "Konyaspor",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
 
   // Galatasaray Ürünleri
@@ -93,6 +105,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma-1.avif",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 12,
@@ -100,6 +113,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma-2.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 13,
@@ -107,6 +121,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma3.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 14,
@@ -114,6 +129,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma5.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 15,
@@ -121,6 +137,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma6.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 16,
@@ -128,6 +145,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma7.png",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 17,
@@ -135,6 +153,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma8.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 18,
@@ -142,6 +161,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma9.jp.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 19,
@@ -149,6 +169,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma10.jpeg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 20,
@@ -163,6 +184,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma12.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 22,
@@ -170,6 +192,7 @@ const products = [
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma13.jpeg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   //Beşiktaş Product
   {
@@ -178,6 +201,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 24,
@@ -185,6 +209,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjk1.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 25,
@@ -192,6 +217,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bkj2.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 26,
@@ -199,6 +225,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma3.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 27,
@@ -206,6 +233,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma4.jpeg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 28,
@@ -213,6 +241,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma5.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 29,
@@ -220,6 +249,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjk6.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 30,
@@ -227,6 +257,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjk7.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 31,
@@ -234,6 +265,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma9.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 32,
@@ -241,6 +273,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma8.jpeg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 33,
@@ -248,6 +281,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma11.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 34,
@@ -255,6 +289,7 @@ const products = [
     price: 2250.0,
     team: "Beşiktaş",
     image: "/images/bjkforma12.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 35,
@@ -262,6 +297,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon1.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 36,
@@ -269,6 +305,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon2.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 37,
@@ -276,6 +313,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon3.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 38,
@@ -283,6 +321,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon4.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 39,
@@ -290,6 +329,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon5.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 40,
@@ -297,6 +337,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon6.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 41,
@@ -304,6 +345,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon7.webp",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 42,
@@ -311,6 +353,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon8.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 43,
@@ -318,6 +361,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon9.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 44,
@@ -325,6 +369,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon10.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 45,
@@ -332,6 +377,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon11.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 46,
@@ -339,6 +385,7 @@ const products = [
     price: 2120.0,
     team: "Trabzonspor",
     image: "/images/trabzon12.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 47,
@@ -346,6 +393,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb1.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 45,
@@ -353,6 +401,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb2.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 49,
@@ -360,6 +409,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb3.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 50,
@@ -367,6 +417,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb4.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 51,
@@ -374,6 +425,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb5.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 52,
@@ -381,6 +433,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb6.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 53,
@@ -388,6 +441,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb7.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 54,
@@ -395,6 +449,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb8.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 55,
@@ -402,6 +457,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb9.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 5,
@@ -409,6 +465,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb10.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 57,
@@ -416,6 +473,7 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb11.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 58,
@@ -423,15 +481,17 @@ const products = [
     price: 2975.0,
     team: "Fenerbahçe",
     image: "/images/fb12.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   // new products
-  // products.js dosyanızın sonuna ekleyin
+
   {
     id: 59,
     name: "Bayern Münih Forma",
     price: 2975.0,
     team: "Bayern Münih",
     image: "/images/bayern.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 60,
@@ -439,6 +499,7 @@ const products = [
     price: 2975.0,
     team: "Barcelona",
     image: "/images/barca.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 61,
@@ -446,6 +507,7 @@ const products = [
     price: 2975.0,
     team: "Chelsea",
     image: "/images/chelsea.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 62,
@@ -453,6 +515,7 @@ const products = [
     price: 2975.0,
     team: "Dortmund",
     image: "/images/dortmund.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 63,
@@ -460,6 +523,7 @@ const products = [
     price: 2975.0,
     team: "Milan",
     image: "/images/milan.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 64,
@@ -467,6 +531,7 @@ const products = [
     price: 2975.0,
     team: "PSG",
     image: "/images/psg.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 65,
@@ -474,6 +539,7 @@ const products = [
     price: 2975.0,
     team: "Real Madrid",
     image: "/images/real.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 66,
@@ -481,6 +547,7 @@ const products = [
     price: 2975.0,
     team: "PSG",
     image: "/images/inter.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 67,
@@ -488,6 +555,7 @@ const products = [
     price: 2975.0,
     team: "Manchester United",
     image: "/images/united.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 68,
@@ -495,12 +563,14 @@ const products = [
     price: 2975.0,
     team: "Arsenal",
     image: "/images/arsenal.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 69,
     name: "Juventus Forma",
     price: 2975.0,
     team: "Juventus",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     image: "/images/juventus.jpg",
   },
   {
@@ -509,6 +579,7 @@ const products = [
     price: 2975.0,
     team: "Celtic",
     image: "/images/celtic.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
 ];
 

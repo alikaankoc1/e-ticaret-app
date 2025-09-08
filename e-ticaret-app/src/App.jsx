@@ -13,7 +13,7 @@ import HomePage from "./components/HomePage/HomePage.jsx";
 import productsData from "./data/products.js";
 import "./App.css";
 
-// TeamPage component'ı artık hem Navbar'ı hem de Cart'ı kendi içinde barındıracak.
+// TeamPage component'i artık hem Navbar'ı hem de Cart'ı kendi içinde barındıracak.
 const TeamPage = ({
   products,
   addToCart,
@@ -64,6 +64,7 @@ const NewArrivalsPage = ({
     <>
       <Navbar />
       <div className="main-content">
+        <h2 style={{ paddingLeft: "20px" }}>Yeni Gelenler</h2>
         <ProductList products={newArrivalProducts} addToCart={addToCart} />
         <Cart
           cart={cart}
@@ -106,11 +107,18 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (productToAdd) => {
-    const existingProduct = cart.find((item) => item.id === productToAdd.id);
+    // Ürünün aynı ID ve aynı bedende olup olmadığını kontrol et
+    const existingProduct = cart.find(
+      (item) =>
+        item.id === productToAdd.id &&
+        item.selectedSize === productToAdd.selectedSize
+    );
+
     if (existingProduct) {
       setCart(
         cart.map((item) =>
-          item.id === productToAdd.id
+          item.id === productToAdd.id &&
+          item.selectedSize === productToAdd.selectedSize
             ? { ...item, quantity: item.quantity + 1 }
             : item
         )
