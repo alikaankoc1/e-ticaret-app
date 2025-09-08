@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -12,6 +11,7 @@ import Cart from "./components/Card/Cart.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Login from "./components/Login/Login.jsx";
 import HomePage from "./components/HomePage/HomePage.jsx";
+import PaymentPage from "./components/PaymentPage/PaymentPage.jsx";
 
 import PaymentButton from "./components/PaymentButton/PaymentButton.jsx";
 import productsData from "./data/products.js";
@@ -219,6 +219,10 @@ function App() {
                 decrementQuantity={decrementQuantity}
               />
             }
+          />
+          <Route
+            path="/odeme"
+            element={<PaymentPage calculateTotal={calculateTotal} />}
           />
         </Routes>
       </div>
