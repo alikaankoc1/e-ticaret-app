@@ -3,9 +3,11 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  /* margin: 20px auto; ve width: 600px; satırlarını silin */
   height: fit-content;
-  width: 300px;
+  /* width: 300px; <-- Bu satırı kaldırdım veya yorum satırına aldım */
+  width: 100%; /* Varsayılan olarak tam genişlik */
+  max-width: 400px; /* Maksimum bir genişlik belirledim */
+  box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
 }
 
 .cart h2 {
@@ -60,6 +62,13 @@
   color: #888;
 }
 
+.item-size {
+  /* Beden bilgisini de ekledim */
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 3px;
+}
+
 .item-actions {
   display: flex;
   align-items: center;
@@ -71,7 +80,7 @@
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  overflow: hidden;
+  overflow: hidden; /* Kenarların keskin olmasını sağlar */
 }
 
 .quantity-button {
@@ -80,6 +89,7 @@
   padding: 5px 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  min-width: 30px; /* Butonların minimum genişliği */
 }
 
 .quantity-button:hover {
@@ -88,16 +98,19 @@
 
 .item-quantity {
   padding: 0 10px;
+  min-width: 20px; /* Sayının taşmasını engeller */
+  text-align: center;
 }
 
 .remove-button {
   background-color: #dc3545;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 8px 12px; /* Buton boyutunu biraz artırdım */
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem;
 }
 
 .remove-button:hover {
@@ -105,32 +118,62 @@
 }
 
 .cart-summary {
+  text-align: right;
   margin-top: 20px;
-  text-align: center;
-  border-top: 2px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-top: 2px solid #eee; /* Toplam kısmını ayırmak için çizgi */
   padding-top: 15px;
 }
 
-.cart-summary h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #333;
-  font-size: 21px;
-}
+/* Responsive mobil için */
+@media (max-width: 768px) {
+  .cart {
+    width: 100%; /* Mobil cihazlarda tam genişlik */
+    max-width: none; /* Maksimum genişlik kısıtlamasını kaldır */
+    padding: 15px; /* Mobil padding'i azalt */
+  }
 
-.checkout-button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  margin-top: 15px;
-  width: 100%;
-  transition: background-color 0.2s ease;
-}
+  .cart-item {
+    flex-direction: column; /* Öğeleri alt alta sırala */
+    align-items: flex-start; /* Sola hizala */
+    gap: 10px; /* Öğeler arası boşluk */
+    padding: 10px 0; /* Mobil padding'i azalt */
+  }
 
-.checkout-button:hover {
-  background-color: #218838;
+  .item-info {
+    width: 100%;
+    justify-content: flex-start; /* Sola hizala */
+    align-items: center; /* Ortala */
+  }
+
+  .item-image {
+    height: 60px; /* Görsel boyutunu küçült */
+    margin-right: 10px;
+  }
+
+  .item-details {
+    flex-grow: 1; /* Detayların daha fazla yer kaplamasını sağla */
+  }
+
+  .item-actions {
+    width: 100%;
+    justify-content: space-between; /* Eylemleri iki yana yasla */
+    margin-top: 10px; /* Üst boşluk ekle */
+  }
+
+  .quantity-controls {
+    order: 2; /* Beden seçiciyi daha alta al */
+  }
+
+  .remove-button {
+    order: 1; /* Sil butonunu daha üste al */
+    padding: 8px 10px; /* Daha küçük buton */
+  }
+
+  .cart-summary {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    padding-top: 10px;
+  }
 }

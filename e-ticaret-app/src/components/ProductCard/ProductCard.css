@@ -139,3 +139,12 @@
 .add-to-cart-button:hover {
   background-color: #0056b3;
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%; /* Mobil cihazlarda tam genişlik */
+  }
+  .product-card img {
+    height: auto; /* Görselin oranını koru */
+  }
+}

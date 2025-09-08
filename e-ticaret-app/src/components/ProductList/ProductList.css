@@ -24,3 +24,10 @@
   justify-content: center;
   gap: 20px;
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .product-list {
+    min-width: 100%;
+    padding: 10px;
+  }
+}

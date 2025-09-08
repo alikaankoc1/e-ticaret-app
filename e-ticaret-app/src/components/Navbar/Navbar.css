@@ -7,11 +7,10 @@
   color: white;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Bu satırı ekle */
+  box-sizing: border-box;
   font-weight: 800;
+  position: relative; /* Mobil menü ikonu için gerekli */
 }
-
-/* Diğer Navbar stilleri... */
 
 .navbar-logo a {
   color: white;
@@ -19,6 +18,13 @@
   font-size: 1.5rem;
   font-weight: bold;
   font-family: sans-serif;
+}
+
+/* Mobil menü ikonu */
+.menu-icon {
+  display: none; /* Varsayılan olarak gizli */
+  cursor: pointer;
+  font-size: 1.8rem;
 }
 
 .navbar-links {
@@ -44,44 +50,87 @@
 .navbar-links a:hover {
   color: #fdbb2d;
 }
-/* Bu kısmı güncelle */
+
+/* Dropdown Menü Stilleri */
 .dropdown-container {
-  position: relative; /* Bu çok önemli! Menünün açılacağı yeri belirler. */
+  position: relative; /* Dropdown'ın konumlandırılması için */
 }
 
 .dropdown-menu {
   position: absolute;
-  /* Kendi genişliğinin yarısı kadar sola kaydırarak tam ortala */
-
   background-color: #333;
   color: white;
   list-style: none;
   padding: 0;
   margin: 0;
-  min-width: 180px; /* Menü genişliğini biraz artırabiliriz */
-  border-radius: 8px; /* Kenarları daha yuvarlak yap */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Daha belirgin bir gölge */
-  z-index: 100; /* Diğer elementlerin üzerinde görünmesini sağla */
-  overflow: hidden; /* Taşmaları engelle */
-  position: absolute;
-  top: 38px; /* Bu değeri Navbar'ın yüksekliğine göre ayarla */
-  left: 130%;
-  transform: translateX(-50%);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  overflow: hidden;
+  top: 100%; /* Linkin hemen altına yerleşir */
+  left: 0; /* Sol kenara hizalar */
+  margin-top: 5px; /* Link ile menü arasında küçük bir boşluk */
 }
 
 .dropdown-menu li {
-  padding: 12px 20px; /* Her bir menü öğesinin iç boşluğunu ayarla */
-  cursor: pointer;
   margin-left: 0;
-  text-align: center; /* Metni ortala */
-  transition: background-color 0.2s ease, color 0.2s ease; /* Yumuşak geçiş efektleri */
-  font-family: sans-serif;
-  font-weight: 300;
+}
+
+.dropdown-menu a {
+  padding: 12px 15px;
+  display: block;
+  font-size: 1rem;
 }
 
 .dropdown-menu li:hover {
-  background-color: #282c34; /* Üzerine gelince daha canlı bir renk */
-  color: white; /* Metin rengini beyaz tut */
+  background-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Mobil cihazlarda görünür yap */
+    font-size: 22px;
+  }
+
+  .navbar-links {
+    display: none; /* Varsayılan olarak gizle */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #222;
+    position: absolute;
+    top: 60px; /* Navbar'ın yüksekliğine göre ayarla */
+    left: 0;
+    z-index: 99; /* Menü ikonunun üstünde görünmesini sağla */
+    padding-bottom: 10px; /* Alt kısımda biraz boşluk */
+  }
+
+  .navbar-links.active {
+    display: flex; /* Aktif olduğunda görünür yap */
+  }
+
+  .navbar-links li {
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid #444;
+  }
+
+  .navbar-links a {
+    padding: 5px;
+    width: 100%;
+    display: block; /* Linkin tüm alanı tıklanabilir yap */
+  }
+
+  .dropdown-menu {
+    position: static; /* Mobil menüde dropdown'ı konumlandırma */
+    width: 100%;
+    background-color: #444;
+    box-shadow: none;
+    margin-top: 0; /* Üst boşluğu kaldır */
+    border-radius: 0; /* Köşe yuvarlaklığını kaldır */
+  }
+  .dropdown-menu a {
+  }
 }

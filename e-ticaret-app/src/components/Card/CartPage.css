@@ -1,28 +1,74 @@
 .cart-page-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 40px;
+  align-items: flex-start; /* Öğeleri yukarıda hizala */
+  padding: 20px; /* Mobil için padding'i azalttım */
   min-height: calc(100vh - 80px); /* Navbar yüksekliği için boşluk bırakır */
+  width: 100%; /* Tam genişlik */
+  box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
 }
-.cart-page-container .cart {
+
+/* .cart-page-container .cart {
   width: 1000px; /* Bu değeri değiştirerek sepetin boyutunu artırabilirsiniz */
-  height: auto;
-}
-/* CartPage.css veya ana stil dosyanıza ekleyin */
-.cart-page-container {
-  position: relative;
+/* height: auto; */
+/* } */
+
+/* Bu kısım artık gerekmiyor çünkü Cart.css'te düzelttiğimiz için, Cart kendi genişliğini ayarlayacak */
+/* .cart-page-container .cart {
+  width: 100%;
+  max-width: 1000px;
+} */
+
+/* Ek olarak, sayfanın tamamında taşmaları engelleyelim */
+body {
+  overflow-x: hidden; /* Ana gövdeden yatay kaydırmayı engeller */
 }
 
-.checkout-button-top-right {
-  position: absolute;
+/* Checkout Butonu Stili (eğer varsa) */
+.checkout-button-container {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
 
-  /* Diğer stil özelliklerini buraya ekleyebilirsiniz (renk, padding vb.) */
+.checkout-button {
   background-color: #28a745;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 350px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Mobil için butonun tam genişlikte olmasını sağlar */
+  max-width: 300px; /* Sadece mobil için daha iyi bir görünüm */
+}
+
+.checkout-button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .cart-page-container {
+    padding: 10px; /* Mobil padding'i daha da azalttım */
+    flex-direction: column; /* Öğe ve sepeti dikey hale getir */
+    align-items: center;
+  }
+
+  /* Mobil cihazlarda sepetin genişliğini otomatik ayarla */
+  .cart-page-container .cart {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px; /* Ürün listesi ile sepet arasına boşluk */
+  }
+
+  .checkout-button-container {
+    width: 100%;
+    padding: 10px; /* Butonun çevresine padding ekle */
+  }
+
+  .checkout-button {
+    width: 100%; /* Mobil ekranda tam genişlikte olsun */
+    max-width: none; /* Maksimum genişlik kısıtlamasını kaldır */
+  }
 }

@@ -22,13 +22,17 @@ function Navbar() {
       <div className="navbar-logo">
         <Link to="/">E-ticaret App</Link>
       </div>
-      <ul className="navbar-links">
+      {/* Mobil menü ikonu */}
+      <div className="menu-icon" onClick={handleMenuToggle}>
+        {isMenuOpen ? "✖" : "☰"} {/* Çarpı veya üç çizgi ikonu */}
+      </div>
+      <ul className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
         <li>
           <Link to="/anasayfa">Anasayfa</Link>
         </li>
         <li className="dropdown-container">
           <a onClick={handleMenuToggle}>Ürünler</a>
-          {isMenuOpen && (
+          {isMenuOpen && ( // Mobil menü açıkken dropdown'ı göster
             <ul className="dropdown-menu">
               {teams.map((team, index) => (
                 <li key={index}>
@@ -42,7 +46,7 @@ function Navbar() {
           <Link to="/sale">Yeni Gelenler</Link>
         </li>
         <li>
-          <Link to="/sepet">Sepet</Link>
+          <Link to="/sepet">Sepet</Link> {/* Sepet linki */}
         </li>
       </ul>
     </nav>

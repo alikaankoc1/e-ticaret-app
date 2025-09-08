@@ -141,3 +141,13 @@ body {
   cursor: pointer;
   color: #888;
 }
+@media (max-width: 768px) {
+  .payment-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .payment-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
