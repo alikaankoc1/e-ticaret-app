@@ -107,7 +107,7 @@
 
 .cart-summary {
   margin-top: 20px;
-  text-align: right;
+  text-align: center;
   border-top: 2px solid #ddd;
   padding-top: 15px;
 }
@@ -116,6 +116,7 @@
   margin: 0;
   font-size: 1.5rem;
   color: #333;
+  font-size: 21px;
 }
 
 .checkout-button {

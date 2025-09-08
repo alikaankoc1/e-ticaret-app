@@ -9,3 +9,20 @@
   width: 1000px; /* Bu değeri değiştirerek sepetin boyutunu artırabilirsiniz */
   height: auto;
 }
+/* CartPage.css veya ana stil dosyanıza ekleyin */
+.cart-page-container {
+  position: relative;
+}
+
+.checkout-button-top-right {
+  position: absolute;
+
+  /* Diğer stil özelliklerini buraya ekleyebilirsiniz (renk, padding vb.) */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 350px;
+}

@@ -60,7 +60,7 @@ function HomePage({ products, addToCart }) {
 
       {/* Yeni Gelenler */}
       <div className="new-arrivals-section">
-        <h2>Yeni Gelenler</h2>
+        <h2 className="newtitle">Yeni Gelenler</h2>
         <ProductList products={newArrivalProducts} addToCart={addToCart} />
       </div>
     </div>

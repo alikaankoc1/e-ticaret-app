@@ -38,10 +38,11 @@
   font-weight: 500;
   transition: color 0.3s;
   font-family: sans-serif;
+  cursor: pointer;
 }
 
 .navbar-links a:hover {
-  color: #61fb6e;
+  color: #fdbb2d;
 }
 /* Bu kısmı güncelle */
 .dropdown-container {
