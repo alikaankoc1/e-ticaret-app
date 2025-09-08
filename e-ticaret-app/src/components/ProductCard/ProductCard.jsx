@@ -3,7 +3,7 @@ import "./ProductCard.css";
 
 function ProductCard({ product, addToCart }) {
   const [selectedSize, setSelectedSize] = useState("");
-  const [notification, setNotification] = useState(""); // Bildirim state'ini ekledik
+  const [isAdded, setIsAdded] = useState(false); // Yeni state ekledik
 
   const handleAddToCart = () => {
     if (!selectedSize) {
@@ -12,10 +12,12 @@ function ProductCard({ product, addToCart }) {
     }
 
     addToCart({ ...product, selectedSize });
-    setNotification("Sepete eklendi!"); // Bildirimi ayarla
+    setIsAdded(true); // Ürün sepete eklenince state'i true yap
+
+    // 2 saniye sonra butonu eski haline çevir
     setTimeout(() => {
-      setNotification(""); // 3 saniye sonra bildirimi gizle
-    }, 3000);
+      setIsAdded(false);
+    }, 2000);
   };
 
   return (
@@ -42,11 +44,14 @@ function ProductCard({ product, addToCart }) {
         </select>
       </div>
 
-      <button onClick={handleAddToCart}>Sepete Ekle</button>
-      {/* Bildirim mesajı */}
-      {notification && (
-        <div className="add-to-cart-notification">{notification}</div>
-      )}
+      {/* Koşullu butonu gösteriyoruz */}
+      <button
+        onClick={handleAddToCart}
+        disabled={isAdded} // Butonun tekrar tıklanmasını engeller
+        className={isAdded ? "added-to-cart-button" : "add-to-cart-button"}
+      >
+        {isAdded ? "Sepete Eklendi" : "Sepete Ekle"}
+      </button>
     </div>
   );
 }

@@ -111,3 +111,31 @@
     opacity: 0;
   }
 }
+/* "Sepete Ekle" butonu için mevcut stil */
+.add-to-cart-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* "Sepete Eklendi" butonu için yeni stil */
+.added-to-cart-button {
+  background-color: #28a745; /* Yeşil renk */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed; /* Tıklanamaz olduğunu belirtmek için */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Butonun üzerine gelindiğinde (hover) efekti */
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}
