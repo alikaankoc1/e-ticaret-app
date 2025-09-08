@@ -1,6 +1,7 @@
+// src/components/Card/Cart.jsx
+// Bu bileşen sadece sepet içeriğini gösterir, buton içermez.
 import React from "react";
 import "./Cart.css";
-// Yeni oluşturduğumuz stil dosyasını buraya dahil edelim
 import "./CartPage.css";
 
 function Cart({
@@ -31,7 +32,6 @@ function Cart({
                     <span className="item-price">
                       {item.price.toFixed(2)} TL
                     </span>
-                    {/* Beden bilgisini buraya ekledik */}
                     <span className="item-size">
                       Beden: {item.selectedSize}
                     </span>
@@ -65,7 +65,6 @@ function Cart({
           </ul>
           <div className="cart-summary">
             <h3>Toplam: {total} TL</h3>
-            <button className="checkout-button">Ödeme Yap</button>
           </div>
         </>
       )}

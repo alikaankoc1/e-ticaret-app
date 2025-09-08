@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import "./ProductCard.css";
 
 function ProductCard({ product, addToCart }) {
-  const [selectedSize, setSelectedSize] = useState(""); // Beden seçimi için state
+  const [selectedSize, setSelectedSize] = useState("");
+  const [notification, setNotification] = useState(""); // Bildirim state'ini ekledik
 
   const handleAddToCart = () => {
-    // Eğer beden seçilmediyse kullanıcıyı uyar
     if (!selectedSize) {
       alert("Lütfen bir beden seçiniz.");
       return;
     }
-    // Seçilen bedeni de sepete ekleme fonksiyonuna gönder
+
     addToCart({ ...product, selectedSize });
+    setNotification("Sepete eklendi!"); // Bildirimi ayarla
+    setTimeout(() => {
+      setNotification(""); // 3 saniye sonra bildirimi gizle
+    }, 3000);
   };
 
   return (
@@ -20,7 +24,6 @@ function ProductCard({ product, addToCart }) {
       <h3>{product.name}</h3>
       <p>{product.price.toFixed(2)} TL</p>
 
-      {/* Beden seçimi için açılır menü */}
       <div className="size-selector">
         <label htmlFor={`size-${product.id}`}>Beden: </label>
         <select
@@ -40,6 +43,10 @@ function ProductCard({ product, addToCart }) {
       </div>
 
       <button onClick={handleAddToCart}>Sepete Ekle</button>
+      {/* Bildirim mesajı */}
+      {notification && (
+        <div className="add-to-cart-notification">{notification}</div>
+      )}
     </div>
   );
 }

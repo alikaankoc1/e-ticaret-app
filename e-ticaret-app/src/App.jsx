@@ -1,19 +1,22 @@
+// src/App.jsx
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useParams,
+  Link,
 } from "react-router-dom";
 import ProductList from "./components/ProductList/ProductList.jsx";
 import Cart from "./components/Card/Cart.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Login from "./components/Login/Login.jsx";
 import HomePage from "./components/HomePage/HomePage.jsx";
+
+import PaymentButton from "./components/PaymentButton/PaymentButton.jsx";
 import productsData from "./data/products.js";
 import "./App.css";
 
-// TeamPage component'i artık hem Navbar'ı hem de Cart'ı kendi içinde barındıracak.
 const TeamPage = ({
   products,
   addToCart,
@@ -45,7 +48,6 @@ const TeamPage = ({
   );
 };
 
-// Yeni Gelenler için yeni bileşen
 const NewArrivalsPage = ({
   products,
   addToCart,
@@ -77,7 +79,6 @@ const NewArrivalsPage = ({
   );
 };
 
-// Sadece sepeti gösterecek yeni bir sayfa bileşeni oluşturduk
 const CartPage = ({
   cart,
   removeFromCart,
@@ -96,6 +97,13 @@ const CartPage = ({
           incrementQuantity={incrementQuantity}
           decrementQuantity={decrementQuantity}
         />
+        {cart.length > 0 && (
+          <div className="cart-page-checkout-button-container">
+            <Link to="/odeme">
+              <PaymentButton />
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );
@@ -106,7 +114,6 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (productToAdd) => {
-    // Ürünün aynı ID ve aynı bedende olup olmadığını kontrol et
     const existingProduct = cart.find(
       (item) =>
         item.id === productToAdd.id &&
@@ -201,7 +208,6 @@ function App() {
               />
             }
           />
-          {/* Yeni Sepet Sayfası Rotası */}
           <Route
             path="/sepet"
             element={
