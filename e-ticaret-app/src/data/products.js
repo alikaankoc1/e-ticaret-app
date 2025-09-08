@@ -477,10 +477,10 @@ const products = [
   },
   {
     id: 66,
-    name: "PSG Forma 2",
+    name: "Inter Forma ",
     price: 2975.0,
     team: "PSG",
-    image: "/images/psg.jpg",
+    image: "/images/inter.jpg",
   },
   {
     id: 67,
@@ -488,6 +488,27 @@ const products = [
     price: 2975.0,
     team: "Manchester United",
     image: "/images/united.jpg",
+  },
+  {
+    id: 68,
+    name: "Arsenal Forma",
+    price: 2975.0,
+    team: "Arsenal",
+    image: "/images/arsenal.jpg",
+  },
+  {
+    id: 69,
+    name: "Juventus Forma",
+    price: 2975.0,
+    team: "Juventus",
+    image: "/images/juventus.jpg",
+  },
+  {
+    id: 70,
+    name: "Celtic Forma",
+    price: 2975.0,
+    team: "Celtic",
+    image: "/images/celtic.jpg",
   },
 ];
 

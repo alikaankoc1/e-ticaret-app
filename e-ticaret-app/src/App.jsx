@@ -20,6 +20,8 @@ const TeamPage = ({
   cart,
   removeFromCart,
   calculateTotal,
+  incrementQuantity,
+  decrementQuantity,
 }) => {
   const { teamName } = useParams();
   const filteredProducts = products.filter(
@@ -35,6 +37,65 @@ const TeamPage = ({
           cart={cart}
           removeFromCart={removeFromCart}
           total={calculateTotal()}
+          incrementQuantity={incrementQuantity}
+          decrementQuantity={decrementQuantity}
+        />
+      </div>
+    </>
+  );
+};
+
+// Yeni Gelenler için yeni bileşen
+const NewArrivalsPage = ({
+  products,
+  addToCart,
+  cart,
+  removeFromCart,
+  calculateTotal,
+  incrementQuantity,
+  decrementQuantity,
+}) => {
+  const newArrivalProductIds = [59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70];
+  const newArrivalProducts = products.filter((product) =>
+    newArrivalProductIds.includes(product.id)
+  );
+
+  return (
+    <>
+      <Navbar />
+      <div className="main-content">
+        <h2 style={{ paddingLeft: "20px" }}>Yeni Gelenler</h2>
+        <ProductList products={newArrivalProducts} addToCart={addToCart} />
+        <Cart
+          cart={cart}
+          removeFromCart={removeFromCart}
+          total={calculateTotal()}
+          incrementQuantity={incrementQuantity}
+          decrementQuantity={decrementQuantity}
+        />
+      </div>
+    </>
+  );
+};
+
+// Sadece sepeti gösterecek yeni bir sayfa bileşeni oluşturduk
+const CartPage = ({
+  cart,
+  removeFromCart,
+  calculateTotal,
+  incrementQuantity,
+  decrementQuantity,
+}) => {
+  return (
+    <>
+      <Navbar />
+      <div className="cart-page-container">
+        <Cart
+          cart={cart}
+          removeFromCart={removeFromCart}
+          total={calculateTotal()}
+          incrementQuantity={incrementQuantity}
+          decrementQuantity={decrementQuantity}
         />
       </div>
     </>
@@ -62,6 +123,26 @@ function App() {
 
   const removeFromCart = (productId) => {
     setCart(cart.filter((item) => item.id !== productId));
+  };
+
+  const incrementQuantity = (productId) => {
+    setCart(
+      cart.map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decrementQuantity = (productId) => {
+    setCart(
+      cart
+        .map((item) =>
+          item.id === productId && item.quantity > 1
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
   };
 
   const calculateTotal = () => {
@@ -95,6 +176,35 @@ function App() {
                 cart={cart}
                 removeFromCart={removeFromCart}
                 calculateTotal={calculateTotal}
+                incrementQuantity={incrementQuantity}
+                decrementQuantity={decrementQuantity}
+              />
+            }
+          />
+          <Route
+            path="/sale"
+            element={
+              <NewArrivalsPage
+                products={products}
+                addToCart={addToCart}
+                cart={cart}
+                removeFromCart={removeFromCart}
+                calculateTotal={calculateTotal}
+                incrementQuantity={incrementQuantity}
+                decrementQuantity={decrementQuantity}
+              />
+            }
+          />
+          {/* Yeni Sepet Sayfası Rotası */}
+          <Route
+            path="/sepet"
+            element={
+              <CartPage
+                cart={cart}
+                removeFromCart={removeFromCart}
+                calculateTotal={calculateTotal}
+                incrementQuantity={incrementQuantity}
+                decrementQuantity={decrementQuantity}
               />
             }
           />

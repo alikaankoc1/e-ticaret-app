@@ -10,8 +10,8 @@ function HomePage({ products, addToCart }) {
     featuredProductIds.includes(product.id)
   );
 
-  // Yeni gelen ürünlerin id'leri
-  const newArrivalProductIds = [59, 60, 61, 62, 63, 64];
+  // Yeni gelen ürünlerin id'leri - Eksik ID'ler eklendi
+  const newArrivalProductIds = [59, 60, 61, 62, 66, 67];
   const newArrivalProducts = products.filter((product) =>
     newArrivalProductIds.includes(product.id)
   );

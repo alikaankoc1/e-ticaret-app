@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./Navbar.css"; // Bu satır doğru, kendi stil dosyasını import ediyor.
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +39,7 @@ function Navbar() {
           )}
         </li>
         <li>
-          <Link to="/sale">Çok Satanlar</Link>
+          <Link to="/sale">Yeni Gelenler</Link>
         </li>
         <li>
           <Link to="/sepet">Sepet</Link>

@@ -1,0 +1,11 @@
+.cart-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  min-height: calc(100vh - 80px); /* Navbar yüksekliği için boşluk bırakır */
+}
+.cart-page-container .cart {
+  width: 1000px; /* Bu değeri değiştirerek sepetin boyutunu artırabilirsiniz */
+  height: auto;
+}

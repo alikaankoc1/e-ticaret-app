@@ -1,6 +1,15 @@
 import React from "react";
 import "./Cart.css";
-function Cart({ cart, removeFromCart, total }) {
+// Yeni oluşturduğumuz stil dosyasını buraya dahil edelim
+import "./CartPage.css";
+
+function Cart({
+  cart,
+  removeFromCart,
+  total,
+  incrementQuantity,
+  decrementQuantity,
+}) {
   return (
     <div className="cart">
       <h2>Sepet</h2>
@@ -8,15 +17,52 @@ function Cart({ cart, removeFromCart, total }) {
         <p>Sepetiniz boş.</p>
       ) : (
         <>
-          <ul>
+          <ul className="cart-list">
             {cart.map((item) => (
-              <li key={item.id}>
-                {item.name} - {item.quantity} adet - {item.price.toFixed(2)} TL
-                <button onClick={() => removeFromCart(item.id)}>Sil</button>
+              <li key={item.id} className="cart-item">
+                <div className="item-info">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="item-image"
+                  />
+                  <div className="item-details">
+                    <span className="item-name">{item.name}</span>
+                    <span className="item-price">
+                      {item.price.toFixed(2)} TL
+                    </span>
+                  </div>
+                </div>
+                <div className="item-actions">
+                  <div className="quantity-controls">
+                    <button
+                      onClick={() => decrementQuantity(item.id)}
+                      className="quantity-button"
+                    >
+                      -
+                    </button>
+                    <span className="item-quantity">{item.quantity}</span>
+                    <button
+                      onClick={() => incrementQuantity(item.id)}
+                      className="quantity-button"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => removeFromCart(item.id)}
+                    className="remove-button"
+                  >
+                    Sil
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
-          <h3>Toplam: {total} TL</h3>
+          <div className="cart-summary">
+            <h3>Toplam: {total} TL</h3>
+            <button className="checkout-button">Ödeme Yap</button>
+          </div>
         </>
       )}
     </div>
