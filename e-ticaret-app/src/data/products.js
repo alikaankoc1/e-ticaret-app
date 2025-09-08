@@ -1,5 +1,6 @@
 const products = [
   // Konyaspor Products
+
   {
     id: 1,
     name: "Konyaspor Forma Retro",
@@ -100,7 +101,7 @@ const products = [
 
   // Galatasaray Ürünleri
   {
-    id: 11,
+    id: 13,
     name: "Galatasaray Forma 1",
     price: 2750.0,
     team: "Galatasaray",
@@ -108,7 +109,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 12,
+    id: 14,
     name: "Galatasaray Forma 2",
     price: 2750.0,
     team: "Galatasaray",
@@ -116,7 +117,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 13,
+    id: 15,
     name: "Galatasaray Forma 3",
     price: 2750.0,
     team: "Galatasaray",
@@ -124,7 +125,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 14,
+    id: 16,
     name: "Galatasaray Forma 4",
     price: 2750.0,
     team: "Galatasaray",
@@ -132,7 +133,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 15,
+    id: 17,
     name: "Galatasaray Forma 5",
     price: 2750.0,
     team: "Galatasaray",
@@ -140,7 +141,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 16,
+    id: 18,
     name: "Galatasaray Forma 6",
     price: 2750.0,
     team: "Galatasaray",
@@ -148,7 +149,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 17,
+    id: 19,
     name: "Galatasaray Forma 7",
     price: 2750.0,
     team: "Galatasaray",
@@ -156,7 +157,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 18,
+    id: 20,
     name: "Galatasaray Forma 8",
     price: 2750.0,
     team: "Galatasaray",
@@ -164,7 +165,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 19,
+    id: 21,
     name: "Galatasaray Forma 9",
     price: 2750.0,
     team: "Galatasaray",
@@ -172,14 +173,15 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 20,
+    id: 22,
     name: "Galatasaray Forma 10",
     price: 2750.0,
     team: "Galatasaray",
     image: "/images/gsforma11.jpg",
+    sizes: ["S", "M", "L", "XL", "XXL"], // BU KOD SATIRINI EKLE
   },
   {
-    id: 21,
+    id: 23,
     name: "Galatasaray Forma 11",
     price: 2750.0,
     team: "Galatasaray",
@@ -187,7 +189,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 22,
+    id: 24,
     name: "Galatasaray Forma 12",
     price: 2750.0,
     team: "Galatasaray",
@@ -196,7 +198,7 @@ const products = [
   },
   //Beşiktaş Product
   {
-    id: 23,
+    id: 25,
     name: "Beşiktaş Forma 1",
     price: 2250.0,
     team: "Beşiktaş",
@@ -204,7 +206,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 24,
+    id: 26,
     name: "Beşiktaş Forma 2",
     price: 2250.0,
     team: "Beşiktaş",
@@ -212,7 +214,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 25,
+    id: 27,
     name: "Beşiktaş Forma 3",
     price: 2250.0,
     team: "Beşiktaş",
@@ -220,7 +222,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 26,
+    id: 28,
     name: "Beşiktaş Forma 4",
     price: 2250.0,
     team: "Beşiktaş",
@@ -228,7 +230,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 27,
+    id: 29,
     name: "Beşiktaş Forma 5",
     price: 2250.0,
     team: "Beşiktaş",
@@ -236,7 +238,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 28,
+    id: 30,
     name: "Beşiktaş Forma 6",
     price: 2250.0,
     team: "Beşiktaş",
@@ -244,7 +246,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 29,
+    id: 31,
     name: "Beşiktaş Forma 7",
     price: 2250.0,
     team: "Beşiktaş",
@@ -252,7 +254,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 30,
+    id: 32,
     name: "Beşiktaş Forma 8",
     price: 2250.0,
     team: "Beşiktaş",
@@ -260,7 +262,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 31,
+    id: 33,
     name: "Beşiktaş Forma 9",
     price: 2250.0,
     team: "Beşiktaş",
@@ -268,7 +270,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 32,
+    id: 34,
     name: "Beşiktaş Forma 10",
     price: 2250.0,
     team: "Beşiktaş",
@@ -276,7 +278,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 33,
+    id: 35,
     name: "Beşiktaş Forma 11",
     price: 2250.0,
     team: "Beşiktaş",
@@ -284,7 +286,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 34,
+    id: 36,
     name: "Beşiktaş Forma 12",
     price: 2250.0,
     team: "Beşiktaş",
@@ -292,7 +294,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 35,
+    id: 37,
     name: "Trabzonspor Forma 1",
     price: 2120.0,
     team: "Trabzonspor",
@@ -300,7 +302,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 36,
+    id: 38,
     name: "Trabzonspor Forma 2",
     price: 2120.0,
     team: "Trabzonspor",
@@ -308,7 +310,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 37,
+    id: 39,
     name: "Trabzonspor Forma 3",
     price: 2120.0,
     team: "Trabzonspor",
@@ -316,7 +318,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 38,
+    id: 40,
     name: "Trabzonspor Forma 4",
     price: 2120.0,
     team: "Trabzonspor",
@@ -324,7 +326,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 39,
+    id: 41,
     name: "Trabzonspor Forma 5",
     price: 2120.0,
     team: "Trabzonspor",
@@ -332,7 +334,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 40,
+    id: 42,
     name: "Trabzonspor Forma 6",
     price: 2120.0,
     team: "Trabzonspor",
@@ -340,7 +342,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 41,
+    id: 43,
     name: "Trabzonspor Forma 7",
     price: 2120.0,
     team: "Trabzonspor",
@@ -348,7 +350,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 42,
+    id: 44,
     name: "Trabzonspor Forma 8",
     price: 2120.0,
     team: "Trabzonspor",
@@ -356,7 +358,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 43,
+    id: 45,
     name: "Trabzonspor Forma 9",
     price: 2120.0,
     team: "Trabzonspor",
@@ -364,7 +366,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 44,
+    id: 46,
     name: "Trabzonspor Forma 10",
     price: 2120.0,
     team: "Trabzonspor",
@@ -372,7 +374,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 45,
+    id: 47,
     name: "Trabzonspor Forma 11",
     price: 2120.0,
     team: "Trabzonspor",
@@ -380,7 +382,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 46,
+    id: 48,
     name: "Trabzonspor Forma 12",
     price: 2120.0,
     team: "Trabzonspor",
@@ -388,7 +390,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 47,
+    id: 49,
     name: "Fenerbahçe Forma",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -396,7 +398,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 45,
+    id: 50,
     name: "Fenerbahçe Forma 2",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -404,7 +406,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 49,
+    id: 51,
     name: "Fenerbahçe Forma 3",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -412,7 +414,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 50,
+    id: 52,
     name: "Fenerbahçe Forma 4",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -420,7 +422,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 51,
+    id: 53,
     name: "Fenerbahçe Forma 5",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -428,7 +430,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 52,
+    id: 54,
     name: "Fenerbahçe Forma 6",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -436,7 +438,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 53,
+    id: 55,
     name: "Fenerbahçe Forma 7",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -444,7 +446,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 54,
+    id: 56,
     name: "Fenerbahçe Forma 8",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -452,7 +454,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 55,
+    id: 57,
     name: "Fenerbahçe Forma 9",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -460,7 +462,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 5,
+    id: 58,
     name: "Fenerbahçe Forma 10",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -468,7 +470,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 57,
+    id: 59,
     name: "Fenerbahçe Forma 11",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -476,7 +478,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 58,
+    id: 60,
     name: "Fenerbahçe Forma 12",
     price: 2975.0,
     team: "Fenerbahçe",
@@ -486,7 +488,7 @@ const products = [
   // new products
 
   {
-    id: 59,
+    id: 61,
     name: "Bayern Münih Forma",
     price: 2975.0,
     team: "Bayern Münih",
@@ -494,7 +496,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 60,
+    id: 62,
     name: "Barcelona Forma",
     price: 2975.0,
     team: "Barcelona",
@@ -502,7 +504,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 61,
+    id: 63,
     name: "Chelsea Forma",
     price: 2975.0,
     team: "Chelsea",
@@ -510,7 +512,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 62,
+    id: 64,
     name: "Dortmund Forma",
     price: 2975.0,
     team: "Dortmund",
@@ -518,7 +520,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 63,
+    id: 65,
     name: "Milan Forma",
     price: 2975.0,
     team: "Milan",
@@ -526,7 +528,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 64,
+    id: 66,
     name: "PSG Forma",
     price: 2975.0,
     team: "PSG",
@@ -534,7 +536,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 65,
+    id: 67,
     name: "Real Madrid Forma",
     price: 2975.0,
     team: "Real Madrid",
@@ -542,15 +544,15 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 66,
+    id: 68,
     name: "Inter Forma ",
     price: 2975.0,
-    team: "PSG",
+    team: "Inter",
     image: "/images/inter.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 67,
+    id: 69,
     name: "Manchester United Forma",
     price: 2975.0,
     team: "Manchester United",
@@ -558,7 +560,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 68,
+    id: 70,
     name: "Arsenal Forma",
     price: 2975.0,
     team: "Arsenal",
@@ -566,7 +568,7 @@ const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
-    id: 69,
+    id: 71,
     name: "Juventus Forma",
     price: 2975.0,
     team: "Juventus",
@@ -574,7 +576,7 @@ const products = [
     image: "/images/juventus.jpg",
   },
   {
-    id: 70,
+    id: 72,
     name: "Celtic Forma",
     price: 2975.0,
     team: "Celtic",

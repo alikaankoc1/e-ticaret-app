@@ -75,8 +75,8 @@ body {
 .pay-button {
   width: 100%;
   padding: 15px;
-  background-color: #28a745;
-  color: white;
+  background-color: #fdbb2d;
+  color: #000000;
   border: none;
   border-radius: 8px;
   font-size: 18px;
@@ -86,9 +86,9 @@ body {
   margin-top: 20px;
 }
 
-.pay-button:hover {
+/* .pay-button:hover {
   background-color: #218838;
-}
+} */
 
 .pay-button:active {
   background-color: #1e7e34;

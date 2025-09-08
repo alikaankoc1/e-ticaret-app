@@ -57,7 +57,7 @@ const NewArrivalsPage = ({
   incrementQuantity,
   decrementQuantity,
 }) => {
-  const newArrivalProductIds = [59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70];
+  const newArrivalProductIds = [61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72];
   const newArrivalProducts = products.filter((product) =>
     newArrivalProductIds.includes(product.id)
   );

@@ -1,34 +1,31 @@
 .payment-button {
-  /* Arkaplan rengi */
-  background-color: #4caf50;
-  /* Metin rengi */
-  color: white;
-  /* İç boşluk */
+  background-color: #fdbb2d;
+
+  color: #000000;
+
   padding: 15px 32px;
-  /* Font boyutu ve kalınlığı */
+
   font-size: 16px;
   font-weight: bold;
-  /* Köşelerin yuvarlaklığı */
+
   border-radius: 8px;
-  /* Kenarlık olmaması */
+
   border: none;
-  /* İmleç stili */
+
   cursor: pointer;
-  /* Geçiş efekti */
+
   transition: background-color 0.3s ease;
-  /* Butonun bulunduğu alanı kaplaması */
+
   width: 100%;
-  /* Üstten ve alttan boşluk */
+
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* Butonun üzerine gelindiğinde (hover) */
-.payment-button:hover {
+/* .payment-button:hover {
   background-color: #45a049;
 }
 
-/* Butonun basılı tutulma anı (active) */
 .payment-button:active {
   background-color: #3e8e41;
-}
+} */

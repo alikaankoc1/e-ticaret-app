@@ -5,13 +5,13 @@ import "./HomePage.css";
 
 function HomePage({ products, addToCart }) {
   // Anasayfada gösterilecek öne çıkan ürünlerin id'leri
-  const featuredProductIds = [1, 19, 16, 39, 27, 21, 55, 57];
+  const featuredProductIds = [1, 17, 21, 34, 36, 55, 59, 47];
   const featuredProducts = products.filter((product) =>
     featuredProductIds.includes(product.id)
   );
 
   // Yeni gelen ürünlerin id'leri - Eksik ID'ler eklendi
-  const newArrivalProductIds = [59, 60, 61, 62];
+  const newArrivalProductIds = [62, 64, 69, 70];
   const newArrivalProducts = products.filter((product) =>
     newArrivalProductIds.includes(product.id)
   );
