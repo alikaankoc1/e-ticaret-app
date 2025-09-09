@@ -122,11 +122,11 @@
   content: "";
   position: absolute;
   top: -150px;
-  left: -150px;
+  left: -50px;
   width: 400px;
   height: 1200px;
   background: url("../images/lm.png") no-repeat center/contain; /* Dosya yolu güncellendi */
-  opacity: 0.18;
+  opacity: 0.14;
   pointer-events: none;
   transform-origin: center;
   animation: floatBall 20s linear infinite;
@@ -136,11 +136,11 @@
   content: "";
   position: absolute;
   bottom: -150px;
-  right: -150px;
+  right: -50px;
   width: 400px;
   height: 1200px;
   background: url("../images/cr.png") no-repeat center/contain; /* Dosya yolu güncellendi */
-  opacity: 0.18;
+  opacity: 0.14;
   pointer-events: none;
   transform-origin: center;
   animation: floatBall 20s linear infinite;

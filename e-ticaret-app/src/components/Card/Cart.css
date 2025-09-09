@@ -5,9 +5,12 @@
   padding: 20px;
   height: fit-content;
   /* width: 300px; <-- Bu satırı kaldırdım veya yorum satırına aldım */
-  width: 100%; /* Varsayılan olarak tam genişlik */
-  max-width: 400px; /* Maksimum bir genişlik belirledim */
+  width: 800px; /* Varsayılan olarak tam genişlik */
+  /* Maksimum bir genişlik belirledim */
   box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
+  .cart {
+    margin: 0 auto; /* Ortalar */
+  }
 }
 
 .cart h2 {
@@ -124,6 +127,12 @@
   font-weight: bold;
   border-top: 2px solid #eee; /* Toplam kısmını ayırmak için çizgi */
   padding-top: 15px;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 15px;
+  border-top: 2px solid #eee;
+  margin-top: auto; /* Fiyat kısmını yukarı iter, buton hep altta olur */
 }
 
 /* Responsive mobil için */
@@ -139,6 +148,10 @@
     align-items: flex-start; /* Sola hizala */
     gap: 10px; /* Öğeler arası boşluk */
     padding: 10px 0; /* Mobil padding'i azalt */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  .cart-item:hover {
+    background-color: #fafafa;
   }
 
   .item-info {
@@ -175,5 +188,12 @@
     font-size: 1.1rem;
     margin-top: 15px;
     padding-top: 10px;
+  }
+  .quantity-button {
+    padding: 8px 14px;
+  }
+  .remove-button {
+    font-size: 0.9rem;
+    padding: 10px 14px;
   }
 }
