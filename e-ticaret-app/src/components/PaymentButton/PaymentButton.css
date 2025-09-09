@@ -9,7 +9,7 @@
   cursor: pointer; /* İşaretçi değişimi */
   transition: all 0.3s ease; /* Yumuşak geçiş efekti */
   font-size: 16px; /* Yazı boyutu */
-  width: 800px; /* Bu satırı ekleyerek genişliği %100 yapabilirsiniz */
+  width: 400px; /* Bu satırı ekleyerek genişliği %100 yapabilirsiniz */
   box-sizing: border-box; /* Padding ve border genişliğe dahil olsun */
   margin-top: 20px; /* Toplam yazısıyla arasında boşluk bırakmak için */
 }

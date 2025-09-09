@@ -5,7 +5,7 @@
   padding: 20px;
   height: fit-content;
   /* width: 300px; <-- Bu satırı kaldırdım veya yorum satırına aldım */
-  width: 800px; /* Varsayılan olarak tam genişlik */
+  width: 400px; /* Varsayılan olarak tam genişlik */
   /* Maksimum bir genişlik belirledim */
   box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
   .cart {
