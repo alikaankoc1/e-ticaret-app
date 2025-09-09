@@ -1,43 +1,46 @@
+/* src/components/Footer/Footer.css */
+
 .footer-container {
   background-color: #333;
   color: #f8f8f8;
-  padding: 40px 20px;
+  padding: 15px 20px; /* Üst ve alt boşlukları 40px'den 15px'e düşürdüm */
   border-top: 1px solid #444;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; /* Mobil cihazlarda alt alta geçişi sağlar */
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 25px; /* Bölümler arasındaki boşluğu 30px'den 15px'e düşürdüm */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-section {
   flex: 1;
-  min-width: 200px; /* Bileşenlerin minimum genişliği */
+  min-width: 200px;
 }
 
 .footer-section h3 {
   font-size: 1.2rem;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #555;
+  margin-bottom: 10px; /* Başlık altındaki boşluğu azalttım */
+  border-bottom: 1px solid #555; /* Kenarlık kalınlığını 1px'e düşürdüm */
   padding-bottom: 5px;
 }
 
 .footer-section p {
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.4; /* Satır yüksekliğini azalttım */
   color: #ccc;
 }
+
 .footer-section ul {
   list-style: none;
   padding: 0;
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Liste elemanları arasındaki boşluğu azalttım */
 }
 
 .footer-section ul li a {
@@ -53,7 +56,7 @@
 
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 10px; /* Sosyal medya ikonları arasındaki boşluğu azalttım */
 }
 
 .social-links a {
@@ -68,8 +71,8 @@
 
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
-  margin-top: 40px;
+  padding-top: 10px; /* Üst boşluğu azalttım */
+  margin-top: 20px;
   border-top: 1px solid #444;
   font-size: 0.8rem;
   color: #999;
@@ -80,16 +83,11 @@
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px; /* Mobil cihazlar için boşluğu azalttım */
   }
 
   .footer-section {
     min-width: 100%;
     text-align: left;
-  }
-
-  .footer-section h3 {
-    border-bottom: none;
-    padding-bottom: 0;
   }
 }
