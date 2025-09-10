@@ -18,7 +18,7 @@ import PaymentPage from "./components/PaymentPage/PaymentPage.jsx";
 import PaymentButton from "./components/PaymentButton/PaymentButton.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import productsData from "./data/products.js";
-import Contact from "./components/Contact/Contact";
+import General from "./components/General/General"; // Dosya yolunuzu kontrol edin
 
 import "./App.css";
 
@@ -31,7 +31,7 @@ const MainLayout = ({ cart }) => {
         {/* İç içe rotaların içeriği burada render edilecek */}
         <Outlet />
       </main>
-      <Contact />
+      <General />
       <Footer />
     </>
   );

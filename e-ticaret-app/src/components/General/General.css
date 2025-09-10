@@ -1,0 +1,26 @@
+.general-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.general-content {
+  display: flex;
+  flex-wrap: wrap; /* Küçük ekranlarda alt alta gelmesini sağlar */
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Her iki bileşenin de eşit genişlikte olmasını sağlar */
+.general-content > * {
+  flex: 1;
+  min-width: 300px; /* Minimum genişlik belirleyerek mobil uyumluluğu artırır */
+}
+
+/* İletişim ve Yorumlar bileşenlerinin genel stilleri */
+.general-content .contact-container,
+.general-content .comments-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
