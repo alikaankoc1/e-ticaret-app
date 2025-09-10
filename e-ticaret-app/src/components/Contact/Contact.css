@@ -1,16 +1,18 @@
 .contact-container {
-  max-width: 600px;
+  max-width: 95%;
   margin: 40px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: sans-serif;
 }
 
 .contact-container h2 {
-  color: #333;
+  color: #000000;
   margin-bottom: 10px;
+  font-size: 32px;
 }
 
 .contact-container p {
@@ -31,8 +33,9 @@
 .form-group label {
   display: block;
   margin-bottom: 5px;
-  color: #555;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .form-group input,
@@ -57,16 +60,13 @@
 }
 
 .submit-button {
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  background-color: white;
+  color: #000000;
+  border: 2px solid #666;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-  background-color: #0056b3;
+  width: 100%;
 }
