@@ -7,7 +7,7 @@ import {
   Route,
   useParams,
   Link,
-  Outlet, // Outlet bileşenini import ediyoruz
+  Outlet,
 } from "react-router-dom";
 import ProductList from "./components/ProductList/ProductList.jsx";
 import Cart from "./components/Card/Cart.jsx";
@@ -18,26 +18,23 @@ import PaymentPage from "./components/PaymentPage/PaymentPage.jsx";
 import PaymentButton from "./components/PaymentButton/PaymentButton.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import productsData from "./data/products.js";
-import General from "./components/General/General"; // Dosya yolunuzu kontrol edin
+import General from "./components/General/General";
 
 import "./App.css";
 
-// Layout bileşeni
+// MainLayout bileşeninde General bileşenini kaldırıyoruz
 const MainLayout = ({ cart }) => {
   return (
     <>
-      <Navbar cartItemCount={cart.length} />
+      <Navbar cartItemCount={cart.length} />{" "}
       <main>
-        {/* İç içe rotaların içeriği burada render edilecek */}
-        <Outlet />
+        <Outlet />{" "}
       </main>
-      <General />
-      <Footer />
+      <Footer />{" "}
     </>
   );
 };
 
-// TeamPage bileşeni
 const TeamPage = ({
   products,
   addToCart,
@@ -54,19 +51,18 @@ const TeamPage = ({
 
   return (
     <div className="main-content">
-      <ProductList products={filteredProducts} addToCart={addToCart} />
+      <ProductList products={filteredProducts} addToCart={addToCart} />{" "}
       <Cart
         cart={cart}
         removeFromCart={removeFromCart}
         total={calculateTotal()}
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
-      />
+      />{" "}
     </div>
   );
 };
 
-// NewArrivalsPage bileşeni
 const NewArrivalsPage = ({
   products,
   addToCart,
@@ -83,19 +79,18 @@ const NewArrivalsPage = ({
 
   return (
     <div className="main-content">
-      <ProductList products={newArrivalProducts} addToCart={addToCart} />
+      <ProductList products={newArrivalProducts} addToCart={addToCart} />{" "}
       <Cart
         cart={cart}
         removeFromCart={removeFromCart}
         total={calculateTotal()}
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
-      />
+      />{" "}
     </div>
   );
 };
 
-// CartPage bileşeni
 const CartPage = ({
   cart,
   removeFromCart,
@@ -105,20 +100,22 @@ const CartPage = ({
 }) => {
   return (
     <div className="cart-page-container">
+      {" "}
       <Cart
         cart={cart}
         removeFromCart={removeFromCart}
         total={calculateTotal()}
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
-      />
+      />{" "}
       {cart.length > 0 && (
         <div className="cart-page-checkout-button-container">
+          {" "}
           <Link to="/odeme">
-            <PaymentButton />
-          </Link>
+            <PaymentButton />{" "}
+          </Link>{" "}
         </div>
-      )}
+      )}{" "}
     </div>
   );
 };
@@ -180,17 +177,22 @@ function App() {
 
   return (
     <Router>
+      {" "}
       <Routes>
-        {/* Login sayfası kendi başına render edilir (Navbar ve Footer olmadan) */}
-        <Route path="/" element={<Login />} />
-
-        {/* Ana sayfalar için Layout bileşenini kullanıyoruz */}
-        {/* Bu rota, Navbar ve Footer'ı her sayfada tekrar etmeden gösterir */}
+        <Route path="/" element={<Login />} />{" "}
         <Route element={<MainLayout cart={cart} />}>
+          {" "}
           <Route
             path="/anasayfa"
-            element={<HomePage products={products} addToCart={addToCart} />}
-          />
+            element={
+              // HomePage ve General'ı aynı element içinde render ediyoruz
+              <>
+                {" "}
+                <HomePage products={products} addToCart={addToCart} />
+                <General />{" "}
+              </>
+            }
+          />{" "}
           <Route
             path="/:teamName"
             element={
@@ -204,7 +206,7 @@ function App() {
                 decrementQuantity={decrementQuantity}
               />
             }
-          />
+          />{" "}
           <Route
             path="/sale"
             element={
@@ -218,7 +220,7 @@ function App() {
                 decrementQuantity={decrementQuantity}
               />
             }
-          />
+          />{" "}
           <Route
             path="/sepet"
             element={
@@ -230,13 +232,13 @@ function App() {
                 decrementQuantity={decrementQuantity}
               />
             }
-          />
+          />{" "}
           <Route
             path="/odeme"
             element={<PaymentPage calculateTotal={calculateTotal} />}
           />
-        </Route>
-      </Routes>
+        </Route>{" "}
+      </Routes>{" "}
     </Router>
   );
 }
