@@ -48,3 +48,29 @@
   color: #666;
   line-height: 1.6;
 }
+@media (max-width: 768px) {
+  .comments-container {
+    padding: 15px; /* İç boşluğu küçült */
+  }
+
+  .comments-container h3 {
+    font-size: 1.5rem; /* Başlık fontunu küçült */
+  }
+
+  .comment-card {
+    padding: 12px; /* Yorum kartlarının iç boşluğunu küçült */
+  }
+
+  .comment-header {
+    flex-direction: column; /* Küçük ekranlarda isim ve rating'i alt alta getir */
+    align-items: flex-start; /* Sola hizala */
+  }
+
+  .comment-header h4 {
+    margin-bottom: 5px; /* İsim ile rating arasına boşluk ekle */
+  }
+
+  .comment-text {
+    font-size: 0.9rem; /* Yorum metninin fontunu küçült */
+  }
+}
