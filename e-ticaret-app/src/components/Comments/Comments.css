@@ -62,8 +62,10 @@
   }
 
   .comment-header {
-    flex-direction: column; /* Küçük ekranlarda isim ve rating'i alt alta getir */
-    align-items: flex-start; /* Sola hizala */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Dikeyde hizalamak için */
+    margin-bottom: 10px;
   }
 
   .comment-header h4 {
