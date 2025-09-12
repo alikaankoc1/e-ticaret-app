@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: flex-start; /* Bu kural zaten mevcut, ancak kontrol edelim. */
   padding: 20px;
+  font-family: sans-serif;
 }
 
 .general-content {
