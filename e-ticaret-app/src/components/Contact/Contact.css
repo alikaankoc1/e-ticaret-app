@@ -74,3 +74,32 @@
   transition: background-color 0.3s ease;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 15px; /* İç boşluğu küçült */
+    margin: 20px auto; /* Üst ve alt marjı küçült */
+  }
+
+  .contact-container h2 {
+    font-size: 24px; /* Başlık fontunu küçült */
+  }
+
+  .contact-container p {
+    font-size: 14px; /* Paragraf fontunu küçült */
+  }
+
+  .form-group label {
+    font-size: 1rem; /* Etiket fontunu küçült */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px; /* Giriş alanlarının iç boşluğunu küçült */
+    font-size: 14px; /* Giriş metni fontunu küçült */
+  }
+
+  .submit-button {
+    padding: 8px 16px; /* Butonun iç boşluğunu küçült */
+    font-size: 14px; /* Buton metni fontunu küçült */
+  }
+}
