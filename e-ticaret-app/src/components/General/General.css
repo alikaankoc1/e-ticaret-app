@@ -12,7 +12,7 @@
   flex-wrap: wrap; /* Küçük ekranlarda alt alta gelmesini sağlar */
   gap: 30px;
   width: 100%;
-  max-width: 1200px;
+  width: 1400px;
   align-items: flex-start; /* Yeni eklenen kısım: Öğeleri üstten hizalar */
 }
 
