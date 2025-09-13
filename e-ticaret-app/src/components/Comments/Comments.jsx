@@ -23,6 +23,18 @@ const Comments = () => {
         "E-ticaret sitemizin güvenilir bir platformu. Kaliteden ödün vermiyorlar.",
       rating: 5,
     },
+    {
+      id: 4,
+      name: "Mustafa Yüce",
+      comment: "Kaliteli ürün ve hızlı kargo teşekkürler.",
+      rating: 4,
+    },
+    {
+      id: 5,
+      name: "Musa Arslan",
+      comment: "Fenerbahçe yeni sezon çubuklu forma harika.",
+      rating: 4,
+    },
   ];
 
   return (
