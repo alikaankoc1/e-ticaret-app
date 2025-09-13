@@ -39,7 +39,7 @@ const Comments = () => {
 
   return (
     <div className="comments-container">
-      <h3>Müşteri Yorumları</h3>
+      <h2>Müşteri Yorumları</h2>
       <div className="comment-list">
         {customerReviews.map((review) => (
           <div key={review.id} className="comment-card">
