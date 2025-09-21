@@ -4,7 +4,7 @@
   margin: 40px auto;
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 9px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: sans-serif;
@@ -16,7 +16,7 @@
 .contact-container h2 {
   color: #000000;
   margin-bottom: 10px;
-  font-size: 32px;
+  font-size: 33px;
 }
 
 .contact-container p {
